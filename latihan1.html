@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 - CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .article-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .article {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+	    border: 3px solid black;
+            border-radius: 20px;
+            box-shadow: 0 10px 14px rgba(0, 0, 0, 0.5);
+        }
+
+        .article:nth-child(odd) {
+            background-color: #cce5ff;
+	    
+        }
+
+        .article:nth-child(even) {
+            background-color: #d4edda;
+        }
+
+        .article img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+	
+        .article-content {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .article-content h2 {
+            margin-top: 0;
+	    text-decoration: underline;
+        }
+
+        .article-content p {
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .article:nth-child(odd) .article-content h2 {
+            color: #004085;
+        }
+
+        .article:nth-child(even) .article-content h2 {
+            color: #155724;
+        }
+
+        .image-left {
+            order: -1;
+        }
+
+        .image-right {
+            order: 1;
+        }
+
+        .content-left {
+            order: 1;
+        }
+
+        .content-right {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <div class="article">
+            <img class="image-left" src="https://www.kahfeveryday.com/wp-content/uploads/2020/10/shutterstock_1233726961-scaled.jpg" alt="Gambar artikel pertama">
+            <div class="article-content content-right">
+                <h2>Pentingnya Pemrograman di Era Digital</h2>
+                <p>Pemrograman adalah proses menulis kode untuk menciptakan perangkat lunak. Bahasa seperti Python dan Java membantu menciptakan aplikasi yang digunakan sehari-hari, seperti aplikasi belajar atau belanja. Di era digital, pemrograman menjadi keterampilan penting untuk mengembangkan solusi teknologi dan membuka peluang karier.</p><br>Sumber: GeeksForGeeks
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-content content-left">
+                <h2>Pemrograman dan Artificial Intelligence (AI)</h2>
+                <p>Pemrograman berperan penting dalam mengembangkan AI, seperti chatbot dan sistem diagnosa kesehatan. Bahasa seperti Python digunakan untuk membuat algoritma yang dapat mempelajari data dan membuat prediksi. Dengan pemrograman, AI terus berkembang dan mempermudah hidup manusia.</p><br>Sumber: Towards Data Science
+            </div>
+            <img class="image-right" src="https://codingstudio.id/wp-content/uploads/2022/10/kecerdasan-buatan.png" alt="Gambar artikel kedua">
+        </div>
+    </div>
+</body>
+</html>
